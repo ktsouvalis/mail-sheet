@@ -73,6 +73,20 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'mails_sent' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/mails_sent.log'),
+            'level' => 'debug',
+            'days' => 60,
+        ],
+
+        'mails_not_sent' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/mails_not_sent.log'),
+            'level' => 'debug',
+            'days' => 60,
+        ],
+
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
