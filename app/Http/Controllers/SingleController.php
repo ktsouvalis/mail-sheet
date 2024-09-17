@@ -63,6 +63,7 @@ class SingleController extends Controller
             }
             if(!$error)Log::channel('mails_sent')->info('mail sent to '.$email);        
         }
+        session()->forget('emails');
         if(!$errors)
             return redirect(url('/'))->with('success', 'Η ενέργεια ολοκληρώθηκε χωρίς λάθη');
         else

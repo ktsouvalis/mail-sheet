@@ -28,6 +28,7 @@
         @endforeach
             
         </table>
+        <br>
         <form action="{{ route('send-emails') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <button type="submit">Send Emails</button>
