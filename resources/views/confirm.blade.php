@@ -24,7 +24,7 @@
         <table>
             
         @foreach(session('emails') as $email)
-            <tr><td>{{$email}}<td></tr>
+            <tr><td>{{$email['email']}}<td></tr>
         @endforeach
             
         </table>
