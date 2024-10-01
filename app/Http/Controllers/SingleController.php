@@ -55,6 +55,7 @@ class SingleController extends Controller
     }  
     
     public function send(Request $request){
+        ini_set('max_execution_time', 300); // Set max execution time to 300 seconds
         $emails = session('emails');
         $errors =0;
         foreach($emails as $email){
