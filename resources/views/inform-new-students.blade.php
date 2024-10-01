@@ -1,6 +1,8 @@
-Waiting For Text
+<p>Waiting For Text </p>
 
 @if(!empty($additionalData))
-    Additional Data:
-    <i>{{$additionalData}}</i>
+    
+    <p><i>{{$additionalData}}</p></i>
 @endif
+
+<h4>Μονάδα Ψηφιακής Διακυβέρνησης</h4>

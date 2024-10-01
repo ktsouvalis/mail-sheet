@@ -29,6 +29,8 @@
             
         </table>
         <br>
+        <p><a href="{{route('preview-emails')}}" target="_blank">Preview Emails</a></p>
+        <br>
         <form action="{{ route('send-emails') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <button type="submit">Send Emails</button>

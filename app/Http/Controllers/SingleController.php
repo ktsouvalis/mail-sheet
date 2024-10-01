@@ -53,6 +53,11 @@ class SingleController extends Controller
                         ->with('non_emails',$non_emails);
         
     }  
+
+    public function preview(Request $request){
+        $emails = session('emails');
+        return new InformNewStudents($emails[0]['additionalData']);
+    }
     
     public function send(Request $request){
         ini_set('max_execution_time', 300); // Set max execution time to 300 seconds
@@ -65,6 +70,7 @@ class SingleController extends Controller
             }
             catch(\Exception $e){
                 Log::channel('mails_not_sent')->error('mail not sent to '.$email['email']);
+                Log::error('mail not sent to '.$email['email']. '. Reason: '.$e->getMessage());
                 $error = 1;
                 $errors= 1;
             }
