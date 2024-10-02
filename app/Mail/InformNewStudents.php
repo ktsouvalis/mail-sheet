@@ -30,7 +30,7 @@ class InformNewStudents extends Mailable
     {
         return new Envelope(
             from: new Address('noreply@uop.gr', 'Πανεπιστήμιο Πελοποννήσου'),
-            subject: 'Waiting for Text',
+            subject: 'ΠαΠελ – Οδηγίες ενεργοποίησης ιδρυματικού λογαριασμού',
         );
     }
 

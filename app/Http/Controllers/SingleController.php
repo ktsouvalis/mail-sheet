@@ -64,6 +64,7 @@ class SingleController extends Controller
                 Mail::to($email['email'])->send(new InformNewStudents($email['additionalData']));
             }
             catch(\Exception $e){
+                Log::error($e->getMessage());
                 Log::channel('mails_not_sent')->error('mail not sent to '.$email['email']);
                 $error = 1;
                 $errors= 1;
