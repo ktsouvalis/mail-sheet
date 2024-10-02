@@ -12,3 +12,5 @@ Route::post('/file/upload', [SingleController::class, 'upload'])->name('upload-f
 Route::view('/file/confirm', 'confirm')->name('confirm');
 
 Route::post('/emails/send', [SingleController::class, 'send'])->name('send-emails');
+
+Route::get('/emails/preview', [SingleController::class, 'preview'])->name('preview-emails');
